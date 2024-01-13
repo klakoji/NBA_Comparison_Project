@@ -193,10 +193,10 @@ def find_closest_string(proposed_string):
     
 
 df_basic_stats = make_dataset(
-    "C:/Users/klako/OneDrive/Documents/Polygence_Project/basic_stats"
+    "/NBA_Comparison_Project/basic_stats"
 )
 df_advanced_stats = make_dataset(
-    "C:/Users/klako/OneDrive/Documents/Polygence_Project/advanced_stats", offset=13
+    "/NBA_Comparison_Project/advanced_stats", offset=13
 )
 # df_basic_stats.join(df_advanced_stats,on=["Name","Season"],how="outer")
 df_player_database = df_basic_stats.merge(
