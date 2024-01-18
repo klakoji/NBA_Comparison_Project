@@ -160,7 +160,7 @@ def stat_checker(df, player1_name, player1_year, player2_name, player2_year):
 
 def collect_player_name():
     player1_name_for_function = ""
-    player_name_checker = "Did you mean {}?"
+    player_name_checker = "Did you mean {}? (Yes/No)"
     while player1_name_for_function not in df_player_database:
         player1_name = input("Enter the first player's name: ")
         player1_name_for_function = (
@@ -193,10 +193,10 @@ def find_closest_string(proposed_string):
     
 
 df_basic_stats = make_dataset(
-    "/NBA_Comparison_Project/basic_stats"
+    "basic_stats"
 )
 df_advanced_stats = make_dataset(
-    "/NBA_Comparison_Project/advanced_stats", offset=13
+    "advanced_stats", offset=13
 )
 # df_basic_stats.join(df_advanced_stats,on=["Name","Season"],how="outer")
 df_player_database = df_basic_stats.merge(
